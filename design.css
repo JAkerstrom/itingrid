@@ -3,20 +3,106 @@
 body {
   padding-left: 1.8rem;
   padding-right: 1.8rem;
+  background: #111;
+  color: #fff;
 }
 
-#calendar, #hackathons {
-  font-size: 180%!important;
+#calendar h2 {
+  margin-bottom: 2px;
+  display: inline;
+}
+
+#calendar h2 + p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#calendar h2 + p + .tags {
+  margin-top: 2px;
+  font-size: 100%;
+  color: #eee;
+  font-family: monospace;
+  letter-spacing: -.04rem;
+}
+
+#calendar input[type=checkbox] {
+  display: none;
+}
+
+#calendar input:checked + label:before {
+  content: "☑️ ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+details { display: inline-block; }
+
+#filter-hackathon:checked  ~ #filter #label-filter-hackathon:before,
+#filter-conference:checked ~ #filter #label-filter-conference:before,
+#filter-meetup:checked     ~ #filter #label-filter-meetup:before {
+  content: "☑️ ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#filter label {
+  padding: .3rem 0 .3rem 1.5rem;
+  position: relative;
+}
+
+#calendar input + label:before {
+  content: "  ";
+}
+
+#calendar label {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  display: inline-block;
+  margin-right: 11px;
+  margin-bottom: 6px;
+}
+
+#calendar .location:not(:empty):after {
+  content: " ";
+}
+
+input:checked ~ .calendar-item {
+  display: none;
+}
+
+#filter-call-for-papers:checked ~ .calendar-item[data-type*="call-for-papers"] {
+  display: block;
+}
+
+#label-filter-hackathon:after {
+  content: " 👩🏽‍💻";
+  position: absolute;
+  top: -2px;
+  padding-left: 4px;
+  font-size: 130%;
+}
+
+#filter-hackathon:checked ~ .calendar-item[data-type*="hackathon"] {
+  display: block;
+}
+
+#filter-conference:checked ~ .calendar-item[data-type*="conference"] {
+  display: block;
+}
+
+#filter-meetup:checked ~ .calendar-item[data-type*="meetup"] {
+  display: block;
+}
+
+.calendar-item {
+  margin-bottom: calc(1.3rem + 3vh);
 }
 
 #hello-reason {
   margin: 2rem auto 1rem;
-  max-width: 42rem;
-}
-
-#thegrid {
-  margin: 1rem auto 4rem;
-  max-width: 500px;
+  padding-right: 5rem;
 }
 
 p {
@@ -25,26 +111,61 @@ p {
   line-height: 130%;
 }
 
+#page-index-returning-visitor header {
+  display: none
+}
+
+#page-index-returning-visitor #hello-reason {
+  display: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
+
 @media screen and (max-device-width: 600px) {
 
-  h1 {
-    margin: 13vh 0 0
+  a {
+    color: #fff;
   }
 
-  #thegrid h2 {
-    margin: 0 0 2px;
+  body {
+    margin: 0;
+    background: #111;
+    color: #fff;
+    padding: 1.8rem;
   }
 
-  #thegrid a {
-    text-decoration: none;
+  header {
+    text-align: center;
+  }
+
+  #label-filter-hackathon:after {
+    font-size: 150%;
+  }
+
+  #calendar h2 {
+    cursor: pointer;
+  }
+
+  #calendar h2 + p + .tags {
+    color: #eee;
+  }
+
+  #calendar label {
+    display: block;
   }
 
   #contribute {
     margin: 5rem 0 2rem;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    padding: .5rem 0;
+    padding: .1rem 0;
   }
+
+  #page-index-returning-visitor #calendar {
+    padding-top: 0;
+  }
+
 }
 
 @media screen and (min-device-width: 800px) and (min-width: 1284px) and (min-height: 440px) {
@@ -57,9 +178,16 @@ p {
     text-decoration: underline;
   }
 
-  body {
-    margin-top: 110vh;
+  body { padding-left: 300px; }
+
+  #page-index {
     padding-bottom: 5vh;
+  }
+
+  #page-index #calendar {
+    width: 55vw;
+    box-sizing: border-box;
+    padding: 2rem;
   }
 
   #contribute {
@@ -72,69 +200,32 @@ p {
     font-size: 1rem;
   }
 
-  h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 45vw;
-    height: 100vh;
-    background: #111;
-    margin: 0;
-    color: #fff;
+  #filter {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  #filter label {
+    display: block;
+    margin-bottom: 7px;
+    cursor: pointer;
+  }
+
+  #page-index header {
+    margin-left: -300px;
     text-align: center;
-    line-height: 100vh;
+    padding-top: 13vh
+  }
+  #page-index header h1 {
+    margin-bottom: 0;
     font-size: 4vw;
-    box-sizing: border-box;
   }
 
-  #thegrid {
-    position: absolute;
-    left: 2.5rem;
-    bottom: 1.1rem;
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    max-width: 100%;
-  }
-
-  #thegrid h2 {
-    font-weight: 400;
-    margin: 5px 0;
-    font-size: 130%;
-    line-height: 130%;
-  }
-
-  #thegrid h2#hackathons {
-    margin-bottom: 0;
-  }
-
-  #thegrid h2#hackathons + h2 {
-    margin-top: 2px;
-  }
-
-  #thegrid a {
-    color: #222;
-  }
-
-  #thegrid a:hover {
-    color: #2a66ee;
-  }
-
-  #thegrid h2:last-child {
-    margin-bottom: 0;
-  }
-
-  #thegridcontainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid #ddd;
-    z-index: -1;
+  #page-index header h2 {
+    font-size: 2vw;
+    font-family: sans-serif;
+    font-weight: 300;
   }
 
 }
