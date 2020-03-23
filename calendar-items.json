@@ -1,23 +1,30 @@
 [
   {
-    "headline":"Hackathons and APIs",
-    "category":"meetup",
-    "date":"2020-03-03",
-    "description_first":"Welcome to an evening about Hackathons and Internet APIs! There will be two broad talks by experienced people on these subjects and the usual chance to network with local tech people in Uppsala.",
-    "location":"Uppsala, at IP-Only",
-    "link":"https://www.meetup.com/Uppsala-Tech-Meetup/events/268774766/",
-    "link_text":"Läs mer"
+    "headline":"Klimathack #4",
+    "category":"hackathon",
+    "date":"2020-03-22",
+    "tags":"mini-hack",
+    "description_headline":"Ett hackathon med fokus på klimatkrisen",
+    "description_first":"Hacket fokuserar på information om klimatkrisen: vad är det här med klimatförändringar, varför är det en kris, hur bråttom är det och hur påverkar detta mig som bor i Sverige?",
+    "description_second":"Varje lag väljer en målgrupp och strävar efter att skapa information som når fram till denna målgrupp. Hela hacket fokuserar på detta och på slutet får lagen chans att visa upp sina alster.",
+    "description_third":"Rent konkret kan det handla om exempelvis: infographics, ett utskriftsbart informationsblad, en informationskampanj för ditt närområde, en interaktiv hemsida for att beräkna en persons koldioxidutsläpp, ett mobilspel, eller varför inte en VR-app som simulerar olika scenarion?",
+    "description_fourth":"Fokusera på målgruppen och fundera på vilken typ av information målgruppen är mottaglig för. Nyckeln till information som är välkommunicerad är oftast att skala av och hålla sig till det centrala. Det är lätt att skriva något långt men svårare att formulera samma sak kortfattat.",
+    "description_fifth":"Det viktiga är en genuin vilja att göra skillnad. Resten löser sig på hacket!",
+    "link":"https://klimathack.se/",
+    "link_text":"Läs mer",
+    "location":"Stockholm"
   },
   {
-    "headline":"Nördreaktorn",
-    "category":"conference",
-    "date":"2020-03-14",
-    "description_first":"Pris: 295kr (frukost &amp; lunch ingår)",
-    "description_second":"Fem talare. Rubriker: AI, Robotics, Blockchain, Machine learning, Kubernetes.",
-    "description_third":"Blockchain: Saga kommer att berätta om olika projekt där hon använt blockchain, bland annat inom musikbranschen och inspirera dig till att komma igång med blockchain. Det finns fler möjligheter än bara crypto-currency till att använda blockchain, en distribuerad databas i ett peer-to-peer nätverk, för att enkelt beskriva begreppet.",
-    "location":"Jönköping",
-    "link":"https://nördreaktorn.se",
-    "link_text":"Läs mer"
+    "headline":"Hack Quarantine",
+    "category":"hackathon",
+    "date":"2020-03-23",
+    "tags":"online",
+    "description_headline":"Global virtual hackathon",
+    "description_first":"A fully-online, people-focused hackathon bringing people together to use their skills to help combat the issues the world is facing with the COVID-19 pandemic.",
+    "description_second":"By working with medical professionals and industry, we’ll provide the knowledge and tools to empower hackers to work towards around improving health, remote working and helping vulnerable populations.",
+    "link":"https://hackquarantine.com/",
+    "link_text":"Läs mer på hackquarantine.com",
+    "location":"Online"
   },
   {
     "headline":"Foss North",
@@ -28,6 +35,15 @@
     "location":"Göteborg",
     "link":"https://foss-north.se/2020/index.html",
     "link_text":"Läs mer"
+  },
+  {
+    "headline":"Stockholm Rust Meetup",
+    "date":"2020-04-02",
+    "tags":"meetup, rust",
+    "description_first":"Meet other Rust enthusiasts and learn more about the latest developments of the language.",
+    "location":"Stockholm",
+    "link":"https://www.goto10.se/evenemang/stockholm-rust-meetup/",
+    "link_text":"Register for free"
   },
   {
     "headline":"Sweden Demo Day",
